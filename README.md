@@ -27,3 +27,18 @@ Extrato (exibir_extrato): mostra movimentações realizadas e saldo final.
 Gerenciamento de usuários (criar_usuario e filtrar_usuario): permite cadastrar clientes com CPF, nome, data de nascimento e endereço.
 Gerenciamento de contas (criar_conta e listar_contas): cria novas contas vinculadas a um usuário e exibe as contas existentes.
 Função principal (main): controla o loop do programa e chama as funções de acordo com a opção escolhida pelo usuário.
+
+## Desafio 3 - Modelando o Distema Bancário em POO com Python
+
+Este código implementa um sistema bancário simples em Python utilizando Programação Orientada a Objetos (POO). Ele permite criar clientes, abrir contas correntes, realizar depósitos, saques e consultar extratos.
+
+🔹 O que ele faz:
+
+Este sistema é uma simulação de banco em Python, construída utilizando programação orientada a objetos. Ele permite a criação de clientes do tipo pessoa física, associando a eles uma ou mais contas bancárias, especificamente contas correntes. Cada conta possui saldo, agência, número e um histórico de transações, podendo realizar depósitos e saques. O sistema também impõe regras para saques em contas correntes, como limite máximo por operação e limite de saques por período. Transações, tanto saques quanto depósitos, são registradas automaticamente no histórico, armazenando tipo, valor e data da operação. O sistema oferece uma interface de menu interativo no console, permitindo criar clientes e contas, efetuar transações, consultar extratos e listar contas existentes. Ele ainda realiza validações de entrada do usuário e tratamento de erros para operações inválidas, garantindo que apenas operações válidas sejam executadas.
+
+Padrões e técnicas:
+
+- POO: herança (ContaCorrente → Conta), abstração (Transacao), encapsulamento (_saldo, _cliente).
+- Type Hints: Uso extensivo de List, Optional, TypeVar para segurança de tipos.
+- Factory Method: Conta.nova_conta genérica para suportar subclasses.
+- Tratamento de exceções: entrada de usuário validada (ValueError, IndexError).
